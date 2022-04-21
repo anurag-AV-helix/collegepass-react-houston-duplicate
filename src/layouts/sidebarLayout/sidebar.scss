@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rajdhani&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+$pink: #e14eca;
+$orange: #f878fc;
+$faded-white: #fafafc;
+$dark-grey: #e5e5e7;
+$yellow: #efb05a;
+$purple: #ba54f5;
+
+$sidebar-width: 60px;
+$sidebar-width-expanded: 230px;
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #1e1e2e;
+}
+
+.sidebar {
+  width: $sidebar-width;
+  background: linear-gradient(0deg, #ba54f5, #e14eca);
+  background-size: 200%;
+  background-position: 0 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: 500ms ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+  font-size: 1rem;
+
+  &--expanded {
+    background-size: 100%;
+    background-position: 0 0;
+    width: $sidebar-width-expanded;
+  }
+
+  &:hover {
+    background-position: 0 0;
+  }
+}
+
+.sidebar-items-container {
+  margin-left: 1.1rem;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  padding-top: 1rem;
+  font-size: 1.6rem;
+  color: $faded-white;
+  width: $sidebar-width-expanded;
+}
+
+.icon {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.sidebar-link:hover {
+  transition: 200ms linear;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $faded-white;
+}
+
+.sidebar-text {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.sidebar-logo-text {
+  font-size: 1.3rem;
+}
+
+.sidebar-logo {
+  margin-bottom: 25px;
+}
+
+.main-content {
+  min-height: 100vh;
+  height: max-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4rem;
+  transition: 500ms ease-in-out;
+  position: relative;
+  z-index: 2;
+
+  &--expanded {
+    margin-left: $sidebar-width-expanded;
+  }
+}
+
+.header {
+  width: fit-content;
+  height: 3rem;
+  padding-top: 1rem;
+  background-color: blue;
+  position: fixed;
+  background-color: transparent;
+  z-index: 3;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.sidebar-toggler {
+  outline: none;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.99925rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 0.0625rem solid transparent;
+  border-radius: 0.25rem;
+}
+
+[type='button']:not(:disabled) {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+.sidebar-toggler-bar {
+  display: block;
+  position: relative;
+  width: 22px;
+  height: 1px;
+  border-radius: 1px;
+  background: #fff;
+}
+
+.sidebar-toggler-bar + .sidebar-toggler-bar {
+  margin-top: 7px;
+}
+
+.bar1 {
+  top: 0;
+  animation: f 0.5s 0s;
+  animation-fill-mode: forwards;
+}
+
+.sidebar-toggler-bar.bar2 {
+  width: 17px;
+  transition: width 0.2s linear;
+  opacity: 1;
+}
+
+.bar3 {
+  bottom: 0;
+  animation: h 0.5s 0s;
+  animation-fill-mode: forwards;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  outline: 1px solid transparent;
+}
+
+.main-content .container {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  padding-left: 3rem;
+  width: fit-content;
+}
+
+.shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  background: linear-gradient(#ff7dd5 80%, transparent);
+  height: 370px;
+  border-radius: 100%;
+  margin-left: -100px;
+  margin-top: -20px;
+  z-index: -1;
+  opacity: 0;
+  transform: scale(0.4) translateY(-400px) translateX(300px);
+  margin-left: 0;
+  margin-top: 0;
+  transition: 400ms ease;
+
+  &:nth-child(2) {
+    background: linear-gradient($orange 80%, transparent);
+    margin-top: 70px;
+    margin-left: 50px;
+    transform: scale(0.4) translateY(-400px);
+    margin-top: 0;
+  }
+
+  .sidebar--expanded & {
+    animation: float 6s infinite alternate;
+    margin-left: -100px;
+    margin-top: -20px;
+    opacity: 0.4;
+    transform: scale(1) translateY(0);
+
+    &:nth-child(2) {
+      animation: float 20s infinite alternate;
+      transform: scale(1) translateY(100px) translateX(170px);
+    }
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  background-color: $pink;
+  cursor: pointer;
+}
+
+@keyframes float {
+  20% {
+    top: 0;
+    left: -100px;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    top: 500px;
+    left: -100px;
+  }
+}

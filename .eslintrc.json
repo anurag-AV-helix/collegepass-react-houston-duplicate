@@ -1,0 +1,45 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["prettier", "react"],
+  "rules": {
+    
+    "no-unused-vars": "warn",
+    "react/prop-types": "off",
+    "react/self-closing-comp": "off",
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "arrow-body-style": "off",
+    "no-nested-ternary": "off",
+    "react/no-unstable-nested-components": "off",
+    "no-unused-expressions": "off",
+    "import/prefer-default-export": "off",
+    "default-param-last": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "prefer-destructuring": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/function-component-definition": [
+      1,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ]
+  }
+}
