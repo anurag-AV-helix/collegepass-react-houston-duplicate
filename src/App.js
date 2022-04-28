@@ -11,6 +11,7 @@ import EditEvent from './pages/Pages/EditEvent'
 import Classes from './pages/Pages/Classes'
 import AddClass from './pages/Pages/AddClass'
 import Notifications from './pages/Pages/SendNotification'
+import Dashboard from './pages/Pages/Dashboard'
 
 
 const RoutesList = [
@@ -79,6 +80,12 @@ const RoutesList = [
     title: 'Notifications',
     path: '/notifications',
     component: <Notifications />,
+    isPrivate: false,
+  },
+  {
+    title: 'Dashboard',
+    path: '/dashboard',
+    component: <Dashboard />,
     isPrivate: false,
   },
   // {
