@@ -11,7 +11,7 @@ const Dashboard = () => {
         <Container fluid className="w-100">
             <Row className="mt-5 mb-5 p-4" style={{
                 background: 'rgb(45, 47, 68)',
-                position: 'fixed',
+                position: 'sticky',
                 zIndex: '10',
                 left: '10.55%',
                 right: '3.6%',
@@ -70,7 +70,6 @@ const Dashboard = () => {
             </Row>
             <Row className="mb-5 p-4" style={{
                 background: '#2d2f44',
-                marginTop: '315px',
                 }}>
                 <Col>
                     <Form>
