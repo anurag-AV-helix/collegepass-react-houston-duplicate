@@ -12,6 +12,7 @@ import Classes from './pages/Pages/Classes'
 import AddClass from './pages/Pages/AddClass'
 import Notifications from './pages/Pages/SendNotification'
 import Dashboard from './pages/Pages/Dashboard'
+import Series from './pages/Pages/Series'
 
 
 const RoutesList = [
@@ -88,12 +89,12 @@ const RoutesList = [
     component: <Dashboard />,
     isPrivate: false,
   },
-  // {
-  //   title: 'Series',
-  //   path: '/series/',
-  //   component: <Series />,
-  //   isPrivate: false,
-  // },
+  {
+    title: 'Series',
+    path: '/series/',
+    component: <Series />,
+    isPrivate: false,
+   },
 ]
 
 const App = () => {
