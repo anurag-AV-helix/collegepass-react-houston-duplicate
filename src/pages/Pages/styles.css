@@ -1,0 +1,49 @@
+.title {
+    font-weight: 700!important;
+    line-height: 1.25!important;
+    font-size: 1.5rem!important;
+    color: #fff;
+    /*opacity: 0.7;*/
+    text-transform: uppercase!important;
+    letter-spacing: 0.03rem!important;
+}
+.box {
+    background: #27293d;
+    border: 1px solid #3f3f40;
+}
+.box-value h5 {
+    padding: 25px 10px 0px 10px;
+    color: #b1b1b5;
+    font-weight: 600;
+    font-size: 25px;
+}
+.value-icon h6 {
+    padding: 25px 10px 10px 10px;
+    color: #b1b1b5;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: right;
+}
+.box-value span {
+    font-size: 12px;
+}
+.float-right {
+    float: right;
+}
+.tile-img-sec img{
+    width: 100%;
+}
+.tile-text-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+.tile-main-box {
+    position: relative;
+}
+.tile-detail p {
+    color: #ffffff;
+}

@@ -31,6 +31,11 @@ const Sidebar = ({ expanded }) => {
           </Link>
         </div>
 
+        <Link to="/dashboard" className="sidebar-link">
+          <i className="bi bi-app-indicator icon"></i>
+          <span className="sidebar-text">Dashboard</span>
+        </Link>
+        
         <Link to="/user-list-100" className="sidebar-link">
           <i className="bi bi-person icon"></i>
           <span className="sidebar-text">User List</span>
