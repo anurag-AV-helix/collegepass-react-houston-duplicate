@@ -42,6 +42,9 @@
 .value-form input#rd {
     padding: 12px 15px;
 }
+.value-form input#inlineCheckbox1 {
+    padding: 18px;
+}
 .box-value span {
     font-size: 12px;
 }

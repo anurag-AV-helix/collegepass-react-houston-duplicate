@@ -151,8 +151,8 @@ const Series = () => {
                               <Row>
                                   <Col className="box box m-2 p-3">
                                       <Row>
-                                          <Col lg={4} md={4} sm={12} xs={12} className="value-form"><h6>Episode Thumbnail</h6></Col>
-                                          <Col lg={4} md={4} sm={12} xs={12} className="value-form"><h6 style={{
+                                          <Col lg={5} md={5} sm={12} xs={12} className="value-form"><h6>Episode Thumbnail</h6></Col>
+                                          <Col lg={3} md={3} sm={12} xs={12} className="value-form"><h6 style={{
                                             textAlign: 'right'
                                           }}>
                                             <input class="form-control" type="file" id="formFile"></input>
@@ -197,6 +197,13 @@ const Series = () => {
                                       </Row>
                                   </Col>
                               </Row>
+                          </Col>
+                      </Row>
+                      <Row>
+                          <Col className="value-form mt-4 mb-3" style={{
+                              textAlign: 'center'
+                          }}>
+                            <Button>Save</Button>
                           </Col>
                       </Row>
                   </Form>
