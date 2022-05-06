@@ -1,3 +1,6 @@
+button.btn.dropdown-toggle.btn-light {
+    padding: 17px 20px;
+}
 .title {
     font-weight: 700!important;
     line-height: 1.25!important;
@@ -43,7 +46,7 @@
     padding: 12px 15px;
 }
 .value-form input#inlineCheckbox1 {
-    padding: 18px;
+    padding: 11px;
 }
 .box-value span {
     font-size: 12px;

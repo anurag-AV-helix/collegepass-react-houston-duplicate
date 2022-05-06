@@ -59,16 +59,24 @@ const Series = () => {
                           </Col>
                       </Row>
                       <Row>
-                          <Col className="mb-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                          <Col className="mb-4 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <Row>
                                   <Col className="box box m-2 p-3">
                                       <Row>
-                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Series Description</h6></Col>
-                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6><textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea></h6></Col>
+                                          <Col lg={12} md={12} sm={12} xs={12} className="value-form">
+                                              <h6>
+                                                <label style={{
+                                                paddingBottom: '10px'
+                                              }}>Series Description</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                              </h6>
+                                          </Col>
                                       </Row>
                                   </Col>
                               </Row>
                           </Col>
+                      </Row>
+                      <Row>    
                           <Col className="mb-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                               <Row>
                                   <Col className="box box m-2 p-3">
@@ -133,7 +141,7 @@ const Series = () => {
                           </Col>
                       </Row>
                       <Row>
-                          <Col className="mb-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                          <Col className="mb-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                               <Row>
                                   <Col className="box box m-2 p-3">
                                       <Row>
@@ -147,33 +155,27 @@ const Series = () => {
                                   </Col>
                               </Row>
                           </Col>
-                          <Col className="mb-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                          <Col className="mb-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                               <Row>
                                   <Col className="box box m-2 p-3">
                                       <Row>
-                                          <Col lg={5} md={5} sm={12} xs={12} className="value-form"><h6>Episode Thumbnail</h6></Col>
-                                          <Col lg={3} md={3} sm={12} xs={12} className="value-form"><h6 style={{
-                                            textAlign: 'right'
-                                          }}>
-                                            <input class="form-control" type="file" id="formFile"></input>
-                                      </h6></Col>
-                                      <Col lg={4} md={4} sm={12} xs={12} className="value-form"><h6 style={{
-                                            textAlign: 'right'
-                                          }}>
-                                            <Button>Upload</Button>
-                                      </h6></Col>
+                                          <Col lg={8} md={8} sm={12} xs={12} className="value-form"><h6>Episode Thumbnail</h6></Col>
+                                          
+                                            <Col lg={4} md={4} sm={12} xs={12} className="value-form"><h6 style={{
+                                                    textAlign: 'right'
+                                                }}>
+                                                    <Button>Upload</Button>
+                                            </h6></Col>
                                       </Row>
                                   </Col>
                               </Row>
                           </Col>
-                      </Row>
-                      <Row>
-                          <Col className="mb-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                          <Col className="mb-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                               <Row>
                                   <Col className="box box m-2 p-3">
                                       <Row>
-                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Episode Link </h6></Col>
-                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6 style={{
+                                          <Col lg={8} md={8} sm={12} xs={12} className="value-form"><h6>Episode Vimeo Link </h6></Col>
+                                          <Col lg={4} md={4} sm={12} xs={12} className="value-form"><h6 style={{
                                             textAlign: 'right'
                                           }}>
                                           <div class="form-check form-check-inline">
@@ -184,17 +186,34 @@ const Series = () => {
                                   </Col>
                               </Row>
                           </Col>
-                          <Col className="mb-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      </Row>
+                      <Row>
+                          <Col className="mb-4 col-lg-11 col-md-11 col-sm-12 col-xs-12">
                               <Row>
                                   <Col className="box box m-2 p-3">
                                       <Row>
-                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Episode Description</h6></Col>
-                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6 style={{
-                                            textAlign: 'right'
+                                          <Col lg={12} md={12} sm={12} xs={12} className="value-form"><h6 style={{
+                                            textAlign: 'left',
                                           }}>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                                              <label style={{
+                                                paddingBottom: '10px'
+                                              }}>Episode Description</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                       </h6></Col>
                                       </Row>
+                                  </Col>
+                              </Row>
+                          </Col>
+                          <Col className="mb-4 col-lg-1 col-md-1 col-sm-12 col-xs-12">
+                              <Row>
+                                  <Col className="mt-5 pt-4">
+                                  <i class="fa fa-minus-circle" aria-hidden="true" style=
+                                    {{
+                                        fontSize: '35px',
+                                        cursor: 'pointer',
+                                        color: '#ffffff',
+                                        opacity: '0.6',
+                                    }}></i>
                                   </Col>
                               </Row>
                           </Col>

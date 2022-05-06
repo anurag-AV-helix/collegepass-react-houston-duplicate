@@ -25,13 +25,19 @@ const Dashboard = () => {
                         }}>
                         <Col>
                             <Form.Group controlId="dob">
-                                <Form.Label>Date From</Form.Label>
+                                <Form.Label style={{
+                                    color: '#ffffff',
+                                    opacity: '0.6'
+                                }}>Date From</Form.Label>
                                 <Form.Control type="date" name="dob" placeholder="Date From" />
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group controlId="dob">
-                                <Form.Label>Date To</Form.Label>
+                                <Form.Label style={{
+                                    color: '#ffffff',
+                                    opacity: '0.6'
+                                }}>Date To</Form.Label>
                                 <Form.Control type="date" name="dob" placeholder="Date From" />
                             </Form.Group>
                         </Col>
@@ -44,26 +50,45 @@ const Dashboard = () => {
                         background: '#27293d',
                         border: '1px solid #3f3f40'
                     }}>
-                        <Col>
+                        <Col lg={3} md={3} sm={12} xs={12}>
+                            <Form.Label style={{
+                                    color: '#ffffff',
+                                    opacity: '0.6'
+                                }}>Relevant Grades</Form.Label>
                             <DropdownMultiselect
                                 options={["8", "9", "10", "11", "12", "Undergraduate"]}
                                 name="Relevant Grades"
                             />
                         </Col>
-                        <Col>
+                        <Col lg={2} md={2} sm={12} xs={12}>
+                            <Form.Label style={{
+                                    color: '#ffffff',
+                                    opacity: '0.6'
+                                }}>Countries</Form.Label>
                             <DropdownMultiselect
                                 options={["US", "UK", "Canada", "Europe", "Singapore", "Hongkong"]}
                                 name="countries"
                             />
                         </Col>
-                        <Col>
+                        <Col lg={3} md={3} sm={12} xs={12}>
+                            <Form.Label style={{
+                                    color: '#ffffff',
+                                    opacity: '0.6'
+                                }}>Specialization</Form.Label>
                             <DropdownMultiselect
                                 options={["1", "2", "3", "4", "5", "6"]}
                                 name="Specialization"
                             />
                         </Col>
-                        <Col>
-                            <Button>Ivy League</Button>
+                        <Col lg={2} md={2} sm={12} xs={12}>
+                            <Button style={{
+                                marginTop: '16%'
+                            }}>Ivy League</Button>
+                        </Col>
+                        <Col lg={2} md={2} sm={12} xs={12}>
+                            <Button style={{
+                                marginTop: '16%'
+                            }}>OxBridge</Button>
                         </Col>
                     </Row>
                 </Col>
@@ -330,7 +355,7 @@ const Dashboard = () => {
                                 <Row>
                                     <Col className="box m-2 p-3">
                                         <Row>
-                                            <Col className=" text-center color-white">GPA ConverterU</Col>
+                                            <Col className=" text-center color-white">GPA Converter</Col>
                                         </Row>
                                         <Row>
                                             <Col className="box-value"><h5>2214</h5></Col>
