@@ -49,10 +49,8 @@ const Series = () => {
                               <Row>
                                   <Col className="box box m-2 p-3">
                                       <Row>
-                                          <Col lg={8} md={8} sm={12} xs={12} className="value-form"><h6>Series Trailer</h6></Col>
-                                          <Col lg={4} md={4} sm={12} xs={12} className="value-form"><h6 style={{
-                                            textAlign: 'right'
-                                          }}><Button>Upload</Button></h6></Col>
+                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Series Trailer</h6></Col>
+                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6><input type="text" /></h6></Col>
                                       </Row>
                                   </Col>
                               </Row>
@@ -145,8 +143,8 @@ const Series = () => {
                               <Row>
                                   <Col className="box box m-2 p-3">
                                       <Row>
-                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Episode Name</h6></Col>
-                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6 style={{
+                                          <Col lg={4} md={4} sm={12} xs={12} className="value-form"><h6>Episode Name</h6></Col>
+                                          <Col lg={8} md={8} sm={12} xs={12} className="value-form"><h6 style={{
                                             textAlign: 'right'
                                           }}>
                                             <input type="text" />
@@ -155,13 +153,13 @@ const Series = () => {
                                   </Col>
                               </Row>
                           </Col>
-                          <Col className="mb-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                          <Col className="mb-4 col-lg-3 col-md-3 col-sm-12 col-xs-12">
                               <Row>
                                   <Col className="box box m-2 p-3">
                                       <Row>
-                                          <Col lg={8} md={8} sm={12} xs={12} className="value-form"><h6>Episode Thumbnail</h6></Col>
+                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Episode Thumbnail</h6></Col>
                                           
-                                            <Col lg={4} md={4} sm={12} xs={12} className="value-form"><h6 style={{
+                                            <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6 style={{
                                                     textAlign: 'right'
                                                 }}>
                                                     <Button>Upload</Button>
@@ -174,17 +172,29 @@ const Series = () => {
                               <Row>
                                   <Col className="box box m-2 p-3">
                                       <Row>
-                                          <Col lg={8} md={8} sm={12} xs={12} className="value-form"><h6>Episode Vimeo Link </h6></Col>
-                                          <Col lg={4} md={4} sm={12} xs={12} className="value-form"><h6 style={{
-                                            textAlign: 'right'
-                                          }}>
-                                          <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-                                          </div>
-                                      </h6></Col>
+                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Episode Vimeo Link </h6></Col>
+                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6><input type="text" /></h6></Col>
                                       </Row>
                                   </Col>
                               </Row>
+                          </Col>
+                          <Col className="mb-4 col-lg-1 col-md-1 col-sm-12 col-xs-12">
+                            <Row>
+                                <Col className="box box m-2 p-2">
+                                    <Row>
+                                        <Col lg={12} md={12} sm={12} xs={12} className="value-form"><h6 style={{
+                                            textAlign: 'center',
+                                            fontSize: '12px',
+                                            color: '#c852e6'
+                                        }}>Paid<div className="form-check form-check-inline">
+                                            <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" style={{
+                                                marginLeft: '-5px',
+                                                marginTop: '10px'
+                                            }} />
+                                          </div></h6></Col>
+                                    </Row>
+                                </Col>
+                            </Row>               
                           </Col>
                       </Row>
                       <Row>
