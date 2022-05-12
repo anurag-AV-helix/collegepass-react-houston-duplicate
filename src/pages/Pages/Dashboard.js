@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { Container, Row, Col, Button, Card, Form } from 'react-bootstrap'
+import { Container, Row, Col, Button, Form } from 'react-bootstrap'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import DropdownMultiselect from "react-multiselect-dropdown-bootstrap";
@@ -11,7 +11,7 @@ const Dashboard = () => {
         <Container fluid className="w-100">
             <Row className="mt-5 mb-5 p-4" style={{
                 background: 'rgb(45, 47, 68)',
-                position: 'fixed',
+                position: 'sticky',
                 zIndex: '10',
                 left: '10.55%',
                 right: '3.6%',
@@ -25,13 +25,19 @@ const Dashboard = () => {
                         }}>
                         <Col>
                             <Form.Group controlId="dob">
-                                <Form.Label>Date From</Form.Label>
+                                <Form.Label style={{
+                                    color: '#ffffff',
+                                    opacity: '0.6'
+                                }}>Date From</Form.Label>
                                 <Form.Control type="date" name="dob" placeholder="Date From" />
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group controlId="dob">
-                                <Form.Label>Date To</Form.Label>
+                                <Form.Label style={{
+                                    color: '#ffffff',
+                                    opacity: '0.6'
+                                }}>Date To</Form.Label>
                                 <Form.Control type="date" name="dob" placeholder="Date From" />
                             </Form.Group>
                         </Col>
@@ -44,33 +50,51 @@ const Dashboard = () => {
                         background: '#27293d',
                         border: '1px solid #3f3f40'
                     }}>
-                        <Col>
+                        <Col lg={3} md={3} sm={12} xs={12}>
+                            <Form.Label style={{
+                                    color: '#ffffff',
+                                    opacity: '0.6'
+                                }}>Relevant Grades</Form.Label>
                             <DropdownMultiselect
                                 options={["8", "9", "10", "11", "12", "Undergraduate"]}
                                 name="Relevant Grades"
                             />
                         </Col>
-                        <Col>
+                        <Col lg={2} md={2} sm={12} xs={12}>
+                            <Form.Label style={{
+                                    color: '#ffffff',
+                                    opacity: '0.6'
+                                }}>Countries</Form.Label>
                             <DropdownMultiselect
                                 options={["US", "UK", "Canada", "Europe", "Singapore", "Hongkong"]}
                                 name="countries"
                             />
                         </Col>
-                        <Col>
+                        <Col lg={3} md={3} sm={12} xs={12}>
+                            <Form.Label style={{
+                                    color: '#ffffff',
+                                    opacity: '0.6'
+                                }}>Specialization</Form.Label>
                             <DropdownMultiselect
                                 options={["1", "2", "3", "4", "5", "6"]}
                                 name="Specialization"
                             />
                         </Col>
-                        <Col>
-                            <Button>Ivy League</Button>
+                        <Col lg={2} md={2} sm={12} xs={12}>
+                            <Button style={{
+                                marginTop: '16%'
+                            }}>Ivy League</Button>
+                        </Col>
+                        <Col lg={2} md={2} sm={12} xs={12}>
+                            <Button style={{
+                                marginTop: '16%'
+                            }}>OxBridge</Button>
                         </Col>
                     </Row>
                 </Col>
             </Row>
             <Row className="mb-5 p-4" style={{
                 background: '#2d2f44',
-                marginTop: '315px',
                 }}>
                 <Col>
                     <Form>
@@ -331,7 +355,7 @@ const Dashboard = () => {
                                 <Row>
                                     <Col className="box m-2 p-3">
                                         <Row>
-                                            <Col className=" text-center color-white">GPA ConverterU</Col>
+                                            <Col className=" text-center color-white">GPA Converter</Col>
                                         </Row>
                                         <Row>
                                             <Col className="box-value"><h5>2214</h5></Col>

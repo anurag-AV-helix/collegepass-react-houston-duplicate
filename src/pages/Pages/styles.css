@@ -1,3 +1,36 @@
+button.btn.dropdown-toggle.btn-light {
+    padding: 17px 20px;
+}
+.width-100 {
+    width: 100%;
+}
+.width-90 {
+    width: 90%;
+}
+.width-80 {
+    width: 80%;
+}
+.width-70 {
+    width: 70%;
+}
+.width-60 {
+    width: 60%;
+}
+.width-50 {
+    width: 50%;
+}
+.width-40 {
+    width: 40%;
+}
+.width-30 {
+    width: 30%;
+}
+.width-20 {
+    width: 20%;
+}
+.width-10 {
+    width: 10%;
+}
 .title {
     font-weight: 700!important;
     line-height: 1.25!important;
@@ -23,6 +56,27 @@
     font-weight: 600;
     font-size: 16px;
     text-align: right;
+}
+.value-form h6 {
+    padding: 15px 5px 5px 5px;
+    color: #b1b1b5;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+}
+.value-form button {
+    border-radius: 4px;
+    padding: 10px 25px;
+    margin-top: -10px;
+}
+.value-form input {
+    padding: 5px 0px;
+}
+.value-form input#rd {
+    padding: 12px 15px;
+}
+.value-form input#inlineCheckbox1 {
+    padding: 11px;
 }
 .box-value span {
     font-size: 12px;

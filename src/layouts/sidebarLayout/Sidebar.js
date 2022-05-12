@@ -32,7 +32,7 @@ const Sidebar = ({ expanded }) => {
         </div>
 
         <Link to="/dashboard" className="sidebar-link">
-          <i className="bi bi-app-indicator icon"></i>
+          <i class="bi bi-columns icon"></i>
           <span className="sidebar-text">Dashboard</span>
         </Link>
         
@@ -54,10 +54,14 @@ const Sidebar = ({ expanded }) => {
           <i className="bi bi-app-indicator icon"></i>
           <span className="sidebar-text">Notifications</span>
         </Link>
-        {/* <Link to="/series" className="sidebar-link">
+        <Link to="/series" className="sidebar-link">
           <i className="bi bi-collection-play icon"></i>
           <span className="sidebar-text">Series</span>
-        </Link> */}
+        </Link>
+        <Link to="/series-list" className="sidebar-link">
+          <i class="bi bi-card-checklist icon"></i>
+          <span className="sidebar-text">Series</span>
+        </Link>
       </div>
     </div>
   )
