@@ -42,7 +42,10 @@ const Dashboard = () => {
                             </Form.Group>
                         </Col>
                         <Col>
-                            <a href="#"><p className='pt-4 mt-2 pb-0'>Clear all filters</p></a>
+                            <a href="#" style={{
+                                    textDecoration: 'none',
+                                    color: '#cb51e1'
+                            }}><p className='pt-4 mt-3 pb-0'>Clear all filters</p></a>
                         </Col>
                     </Row>
 
@@ -58,6 +61,7 @@ const Dashboard = () => {
                             <DropdownMultiselect
                                 options={["8", "9", "10", "11", "12", "Undergraduate"]}
                                 name="Relevant Grades"
+                                placeholder="Select Grades"
                             />
                         </Col>
                         <Col lg={2} md={2} sm={12} xs={12}>
@@ -68,6 +72,7 @@ const Dashboard = () => {
                             <DropdownMultiselect
                                 options={["US", "UK", "Canada", "Europe", "Singapore", "Hongkong"]}
                                 name="countries"
+                                placeholder="Select Countries"
                             />
                         </Col>
                         <Col lg={3} md={3} sm={12} xs={12}>
@@ -78,16 +83,17 @@ const Dashboard = () => {
                             <DropdownMultiselect
                                 options={["1", "2", "3", "4", "5", "6"]}
                                 name="Specialization"
+                                placeholder="Select Specialization"
                             />
                         </Col>
                         <Col lg={2} md={2} sm={12} xs={12}>
                             <Button style={{
-                                marginTop: '16%'
+                                marginTop: '20%'
                             }}>Ivy League</Button>
                         </Col>
                         <Col lg={2} md={2} sm={12} xs={12}>
                             <Button style={{
-                                marginTop: '16%'
+                                marginTop: '20%'
                             }}>OxBridge</Button>
                         </Col>
                     </Row>

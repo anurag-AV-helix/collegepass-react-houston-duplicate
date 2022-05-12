@@ -37,10 +37,10 @@ const Series = () => {
                               <Row>
                                   <Col className="box box m-2 p-3">
                                       <Row>
-                                          <Col lg={8} md={8} sm={12} xs={12} className="value-form"><h6>Series Thumbnail</h6></Col>
-                                          <Col lg={4} md={4} sm={12} xs={12} className="value-form"><h6 style={{
+                                          <Col lg={7} md={7} sm={12} xs={12} className="value-form"><h6>Series Thumbnail</h6></Col>
+                                          <Col lg={5} md={5} sm={12} xs={12} className="value-form"><h6 style={{
                                             textAlign: 'right'
-                                          }}><Button>Upload</Button></h6></Col>
+                                          }}><input className="form-control" type="file" id="formFile" /></h6></Col>
                                       </Row>
                                   </Col>
                               </Row>
@@ -101,7 +101,9 @@ const Series = () => {
                                           }}>
                                             <DropdownMultiselect
                                                 options={["8", "9", "10", "11", "12", "Undergraduate"]}
-                                                name="Relevant Grades"
+                                                name="Series Tags"
+                                                value=""
+                                                placeholder="Select Tags"
                                             />
                                       </h6></Col>
                                       </Row>
@@ -162,7 +164,7 @@ const Series = () => {
                                             <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6 style={{
                                                     textAlign: 'right'
                                                 }}>
-                                                    <Button>Upload</Button>
+                                                    <input className="form-control" type="file" id="formFile" />
                                             </h6></Col>
                                       </Row>
                                   </Col>
