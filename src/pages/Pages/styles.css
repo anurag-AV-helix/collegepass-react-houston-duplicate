@@ -58,11 +58,12 @@ button.btn.dropdown-toggle.btn-light {
     text-align: right;
 }
 .value-form h6 {
-    padding: 15px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
     color: #b1b1b5;
     font-weight: 600;
     font-size: 16px;
     text-align: left;
+    margin-bottom: 0;
 }
 .value-form button {
     border-radius: 4px;
@@ -100,4 +101,7 @@ button.btn.dropdown-toggle.btn-light {
 }
 .tile-detail p {
     color: #ffffff;
+}
+.value-form h6 input#formFile {
+    padding: 5px 10px;
 }
