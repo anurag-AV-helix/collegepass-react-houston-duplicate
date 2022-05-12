@@ -111,6 +111,43 @@ const Series = () => {
                               </Row>
                           </Col>
                       </Row>
+                      <Row>    
+                          <Col className="mb-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                              <Row>
+                                  <Col className="box box m-2 p-3">
+                                      <Row>
+                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Release Time</h6></Col>
+                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6 style={{
+                                            textAlign: 'right'
+                                          }}>
+                                            <Form.Group controlId="rd">
+                                              <Form.Control type="time" name="rd" placeholder="" />
+                                            </Form.Group>
+                                      </h6></Col>
+                                      </Row>
+                                  </Col>
+                              </Row>
+                          </Col>
+                          <Col className="mb-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                              <Row>
+                                  <Col className="box box m-2 p-3">
+                                      <Row>
+                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Countries Tags</h6></Col>
+                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6 style={{
+                                            textAlign: 'right'
+                                          }}>
+                                            <DropdownMultiselect
+                                                options={["8", "9", "10", "11", "12", "Undergraduate"]}
+                                                name="Series Tags"
+                                                value=""
+                                                placeholder="Select Tags"
+                                            />
+                                      </h6></Col>
+                                      </Row>
+                                  </Col>
+                              </Row>
+                          </Col>
+                      </Row>
                   </Form>
               </Col>
           </Row>
@@ -188,7 +225,7 @@ const Series = () => {
                                             textAlign: 'center',
                                             fontSize: '12px',
                                             color: '#c852e6'
-                                        }}>Paid<div className="form-check form-check-inline">
+                                        }}>PLUS<div className="form-check form-check-inline">
                                             <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" style={{
                                                 marginLeft: '-5px',
                                                 marginTop: '10px'
