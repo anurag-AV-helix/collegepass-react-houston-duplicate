@@ -8,149 +8,149 @@ import {
 } from '../../actions/eventsActions'
 
 const SeriesList = () => {
-  const dispatch = useDispatch()
-  const events = useSelector((state) => state.events.events)
+  // const dispatch = useDispatch()
+  // const events = useSelector((state) => state.events.events)
 
-  const [sortAsc, setSortAsc] = useState(false)
-  const [activeSort, setActiveSort] = useState('date')
+  // const [sortAsc, setSortAsc] = useState(false)
+  // const [activeSort, setActiveSort] = useState('date')
 
-  const [searchInput, setSearchInput] = useState('')
+  // const [searchInput, setSearchInput] = useState('')
 
-  useEffect(() => {
-    dispatch(getEventsFullData())
-  }, [dispatch])
+  // useEffect(() => {
+  //   dispatch(getEventsFullData())
+  // }, [dispatch])
 
-  const handleDeleteEvent = (id) => {
-    dispatch(deleteEventAction(id))
-    dispatch(getEventsFullData())
-  }
+  // const handleDeleteEvent = (id) => {
+  //   dispatch(deleteEventAction(id))
+  //   dispatch(getEventsFullData())
+  // }
 
-  const handleClick = (eventData) => {
-    window.open(`events/edit-event/${eventData.ID}`)
-  }
+  // const handleClick = (eventData) => {
+  //   window.open(`events/edit-event/${eventData.ID}`)
+  // }
 
-  const handleAdd = () => {
-    window.open('series')
-  }
+  // const handleAdd = () => {
+  //   window.open('series')
+  // }
 
-  let tableBodyComponent = null
+  // let tableBodyComponent = null
 
-  if (events !== undefined && events !== null && events.length > 0) {
-    if (searchInput.length > 0) {
-      tableBodyComponent = events
-        .filter((e) => e.NAME.toLowerCase().includes(searchInput))
-        .sort((a, b) => {
-          switch (activeSort) {
-            case 'name': {
-              if (sortAsc) return a.NAME > b.NAME ? 1 : -1
-              else return a.NAME < b.NAME ? 1 : -1
-            }
-            case 'date': {
-              const dateA = new Date(a.DATE_TIME)
-              const dateB = new Date(b.DATE_TIME)
-              if (sortAsc) return dateA > dateB ? 1 : -1
-              else return dateA < dateB ? 1 : -1
-            }
-            case 'regCount': {
-              if (sortAsc)
-                return a.REGISTRATION_COUNT > b.REGISTRATION_COUNT ? 1 : -1
-              else return a.REGISTRATION_COUNT < b.REGISTRATION_COUNT ? 1 : -1
-            }
-            case 'attendeeCount': {
-              if (sortAsc) return a.ATTENDEES_COUNT > b.ATTENDEES_COUNT ? 1 : -1
-              else return a.ATTENDEES_COUNT < b.ATTENDEES_COUNT ? 1 : -1
-            }
-            default:
-              return 1
-          }
-        })
-        .map((eventData) => {
-          return (
-            <tr key={eventData.ID} className="data-row">
-              <td>{eventData.NAME}</td>
-              <td>{moment(eventData.DATE_TIME).utc().format('DD/MM/YYYY')}</td>
-              <td>{eventData.ZOOMID}</td>
-              <td>{eventData.ZOOM_PASS}</td>
-              <td>{eventData.REGISTRATION_COUNT}</td>
-              <td>{eventData.ATTENDEES_COUNT}</td>
-              <td>
-                <Button
-                  className="btn-primary"
-                  onClick={() => handleClick(eventData)}
-                >
-                  Edit
-                </Button>
-              </td>
+  // if (events !== undefined && events !== null && events.length > 0) {
+  //   if (searchInput.length > 0) {
+  //     tableBodyComponent = events
+  //       .filter((e) => e.NAME.toLowerCase().includes(searchInput))
+  //       .sort((a, b) => {
+  //         switch (activeSort) {
+  //           case 'name': {
+  //             if (sortAsc) return a.NAME > b.NAME ? 1 : -1
+  //             else return a.NAME < b.NAME ? 1 : -1
+  //           }
+  //           case 'date': {
+  //             const dateA = new Date(a.DATE_TIME)
+  //             const dateB = new Date(b.DATE_TIME)
+  //             if (sortAsc) return dateA > dateB ? 1 : -1
+  //             else return dateA < dateB ? 1 : -1
+  //           }
+  //           case 'regCount': {
+  //             if (sortAsc)
+  //               return a.REGISTRATION_COUNT > b.REGISTRATION_COUNT ? 1 : -1
+  //             else return a.REGISTRATION_COUNT < b.REGISTRATION_COUNT ? 1 : -1
+  //           }
+  //           case 'attendeeCount': {
+  //             if (sortAsc) return a.ATTENDEES_COUNT > b.ATTENDEES_COUNT ? 1 : -1
+  //             else return a.ATTENDEES_COUNT < b.ATTENDEES_COUNT ? 1 : -1
+  //           }
+  //           default:
+  //             return 1
+  //         }
+  //       })
+  //       .map((eventData) => {
+  //         return (
+  //           <tr key={eventData.ID} className="data-row">
+  //             <td>{eventData.NAME}</td>
+  //             <td>{moment(eventData.DATE_TIME).utc().format('DD/MM/YYYY')}</td>
+  //             <td>{eventData.ZOOMID}</td>
+  //             <td>{eventData.ZOOM_PASS}</td>
+  //             <td>{eventData.REGISTRATION_COUNT}</td>
+  //             <td>{eventData.ATTENDEES_COUNT}</td>
+  //             <td>
+  //               <Button
+  //                 className="btn-primary"
+  //                 onClick={() => handleClick(eventData)}
+  //               >
+  //                 Edit
+  //               </Button>
+  //             </td>
 
-              <td>
-                <Button
-                  className="btn-dlt"
-                  onClick={() => handleDeleteEvent(eventData.ID)}
-                >
-                  DELETE
-                </Button>
-              </td>
-            </tr>
-          )
-        })
-    } else {
-      tableBodyComponent = events
-        .sort((a, b) => {
-          switch (activeSort) {
-            case 'name': {
-              if (sortAsc) return a.NAME > b.NAME ? 1 : -1
-              else return a.NAME < b.NAME ? 1 : -1
-            }
-            case 'date': {
-              const dateA = new Date(a.DATE_TIME)
-              const dateB = new Date(b.DATE_TIME)
-              if (sortAsc) return dateA > dateB ? 1 : -1
-              else return dateA < dateB ? 1 : -1
-            }
-            case 'regCount': {
-              if (sortAsc)
-                return a.REGISTRATION_COUNT > b.REGISTRATION_COUNT ? 1 : -1
-              else return a.REGISTRATION_COUNT < b.REGISTRATION_COUNT ? 1 : -1
-            }
-            case 'attendeeCount': {
-              if (sortAsc) return a.ATTENDEES_COUNT > b.ATTENDEES_COUNT ? 1 : -1
-              else return a.ATTENDEES_COUNT < b.ATTENDEES_COUNT ? 1 : -1
-            }
-            default:
-              return 1
-          }
-        })
-        .map((eventData) => {
-          return (
-            <tr key={eventData.ID} className="data-row">
-              <td>{eventData.NAME}</td>
-              <td>{moment(eventData.DATE_TIME).utc().format('DD/MM/YYYY')}</td>
-              <td>{eventData.ZOOMID}</td>
-              <td>{eventData.ZOOM_PASS}</td>
-              <td>{eventData.REGISTRATION_COUNT}</td>
-              <td>{eventData.ATTENDEES_COUNT}</td>
-              <td>
-                <Button
-                  className="btn-primary"
-                  onClick={() => handleClick(eventData)}
-                >
-                  Edit
-                </Button>
-              </td>
+  //             <td>
+  //               <Button
+  //                 className="btn-dlt"
+  //                 onClick={() => handleDeleteEvent(eventData.ID)}
+  //               >
+  //                 DELETE
+  //               </Button>
+  //             </td>
+  //           </tr>
+  //         )
+  //       })
+  //   } else {
+  //     tableBodyComponent = events
+  //       .sort((a, b) => {
+  //         switch (activeSort) {
+  //           case 'name': {
+  //             if (sortAsc) return a.NAME > b.NAME ? 1 : -1
+  //             else return a.NAME < b.NAME ? 1 : -1
+  //           }
+  //           case 'date': {
+  //             const dateA = new Date(a.DATE_TIME)
+  //             const dateB = new Date(b.DATE_TIME)
+  //             if (sortAsc) return dateA > dateB ? 1 : -1
+  //             else return dateA < dateB ? 1 : -1
+  //           }
+  //           case 'regCount': {
+  //             if (sortAsc)
+  //               return a.REGISTRATION_COUNT > b.REGISTRATION_COUNT ? 1 : -1
+  //             else return a.REGISTRATION_COUNT < b.REGISTRATION_COUNT ? 1 : -1
+  //           }
+  //           case 'attendeeCount': {
+  //             if (sortAsc) return a.ATTENDEES_COUNT > b.ATTENDEES_COUNT ? 1 : -1
+  //             else return a.ATTENDEES_COUNT < b.ATTENDEES_COUNT ? 1 : -1
+  //           }
+  //           default:
+  //             return 1
+  //         }
+  //       })
+  //       .map((eventData) => {
+  //         return (
+  //           <tr key={eventData.ID} className="data-row">
+  //             <td>{eventData.NAME}</td>
+  //             <td>{moment(eventData.DATE_TIME).utc().format('DD/MM/YYYY')}</td>
+  //             <td>{eventData.ZOOMID}</td>
+  //             <td>{eventData.ZOOM_PASS}</td>
+  //             <td>{eventData.REGISTRATION_COUNT}</td>
+  //             <td>{eventData.ATTENDEES_COUNT}</td>
+  //             <td>
+  //               <Button
+  //                 className="btn-primary"
+  //                 onClick={() => handleClick(eventData)}
+  //               >
+  //                 Edit
+  //               </Button>
+  //             </td>
 
-              <td>
-                <Button
-                  className="btn-dlt"
-                  onClick={() => handleDeleteEvent(eventData.ID)}
-                >
-                  DELETE
-                </Button>
-              </td>
-            </tr>
-          )
-        })
-    }
-  }
+  //             <td>
+  //               <Button
+  //                 className="btn-dlt"
+  //                 onClick={() => handleDeleteEvent(eventData.ID)}
+  //               >
+  //                 DELETE
+  //               </Button>
+  //             </td>
+  //           </tr>
+  //         )
+  //       })
+  //   }
+  // }
 
   return (
     <Container fluid className="w-100">
