@@ -14,6 +14,7 @@ import Notifications from './pages/Pages/SendNotification'
 import Dashboard from './pages/Pages/Dashboard'
 import Series from './pages/Pages/Series'
 import SeriesList from './pages/Pages/SeriesList'
+import IndividualStats from './pages/Pages/IndividualStats'
 
 
 const RoutesList = [
@@ -101,6 +102,12 @@ const RoutesList = [
     title: 'SeriesList',
     path: '/series-list/',
     component: <SeriesList />,
+    isPrivate: false,
+   },
+   {
+    title: 'IndividualStats',
+    path: '/individual-stats/',
+    component: <IndividualStats />,
     isPrivate: false,
    },
 ]
