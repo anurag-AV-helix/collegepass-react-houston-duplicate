@@ -32,8 +32,13 @@ const Sidebar = ({ expanded }) => {
         </div>
 
         <Link to="/dashboard" className="sidebar-link">
-          <i class="bi bi-columns icon"></i>
+          <i className="bi bi-columns icon"></i>
           <span className="sidebar-text">Dashboard</span>
+        </Link>
+
+        <Link to="/individual-stats" className="sidebar-link">
+          <i className="bi bi-bar-chart-steps icon"></i>
+          <span className="sidebar-text">Individual Stats</span>
         </Link>
         
         <Link to="/user-list-100" className="sidebar-link">
