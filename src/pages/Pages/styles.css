@@ -71,7 +71,8 @@ button.btn.dropdown-toggle.btn-light {
     margin-top: -10px;
 }
 .value-form input {
-    padding: 5px 0px;
+    padding: 5px 5px;
+    width: 100%;
 }
 .value-form input#rd {
     padding: 12px 15px;
@@ -104,4 +105,9 @@ button.btn.dropdown-toggle.btn-light {
 }
 .value-form h6 input#formFile {
     padding: 5px 10px;
+}
+.plus-form-sep {
+    background: #454869;
+    padding: 20px 10px 0px 10px;
+    margin: 5px 0px 45px 0px;
 }

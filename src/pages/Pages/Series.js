@@ -177,96 +177,196 @@ const Series = () => {
                           <Col className="mb-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                           </Col>
                       </Row>
-                      <Row>
-                          <Col className="mb-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                              <Row>
-                                  <Col className="box box m-2 p-3">
-                                      <Row>
-                                          <Col lg={4} md={4} sm={12} xs={12} className="value-form"><h6>Episode Name</h6></Col>
-                                          <Col lg={8} md={8} sm={12} xs={12} className="value-form"><h6 style={{
-                                            textAlign: 'right'
-                                          }}>
-                                            <input type="text" />
-                                      </h6></Col>
-                                      </Row>
-                                  </Col>
-                              </Row>
-                          </Col>
-                          <Col className="mb-4 col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                              <Row>
-                                  <Col className="box box m-2 p-3">
-                                      <Row>
-                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Episode Thumbnail</h6></Col>
-                                          
-                                            <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6 style={{
+                      <Row className="plus-form-sep">
+                          <Col>
+                            <Row>
+                                <Col className="mb-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <Row>
+                                        <Col className="box box m-2 p-3">
+                                            <Row>
+                                                <Col lg={4} md={4} sm={12} xs={12} className="value-form"><h6>Episode Name</h6></Col>
+                                                <Col lg={8} md={8} sm={12} xs={12} className="value-form"><h6 style={{
                                                     textAlign: 'right'
                                                 }}>
-                                                    <input className="form-control" type="file" id="formFile" />
+                                                    <input type="text" />
                                             </h6></Col>
-                                      </Row>
-                                  </Col>
-                              </Row>
-                          </Col>
-                          <Col className="mb-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                              <Row>
-                                  <Col className="box box m-2 p-3">
-                                      <Row>
-                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Episode Vimeo Link </h6></Col>
-                                          <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6><input type="text" /></h6></Col>
-                                      </Row>
-                                  </Col>
-                              </Row>
-                          </Col>
-                          <Col className="mb-4 col-lg-1 col-md-1 col-sm-12 col-xs-12">
-                            <Row>
-                                <Col className="box box m-2 p-2">
-                                    <Row>
-                                        <Col lg={12} md={12} sm={12} xs={12} className="value-form"><h6 style={{
-                                            textAlign: 'center',
-                                            fontSize: '12px',
-                                            color: '#c852e6'
-                                        }}>PLUS<div className="form-check form-check-inline">
-                                            <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" style={{
-                                                marginLeft: '-5px',
-                                                marginTop: '10px'
-                                            }} />
-                                          </div></h6></Col>
+                                            </Row>
+                                        </Col>
                                     </Row>
                                 </Col>
-                            </Row>               
-                          </Col>
+                                <Col className="mb-4 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                    <Row>
+                                        <Col className="box box m-2 p-3">
+                                            <Row>
+                                                <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Episode Thumbnail</h6></Col>
+                                                
+                                                    <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6 style={{
+                                                            textAlign: 'right'
+                                                        }}>
+                                                            <input className="form-control" type="file" id="formFile" />
+                                                    </h6></Col>
+                                            </Row>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col className="mb-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <Row>
+                                        <Col className="box box m-2 p-3">
+                                            <Row>
+                                                <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Episode Vimeo Link </h6></Col>
+                                                <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6><input type="text" /></h6></Col>
+                                            </Row>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col className="mb-4 col-lg-1 col-md-1 col-sm-12 col-xs-12">
+                                    <Row>
+                                        <Col className="box box m-2 p-2">
+                                            <Row>
+                                                <Col lg={12} md={12} sm={12} xs={12} className="value-form"><h6 style={{
+                                                    textAlign: 'center',
+                                                    fontSize: '12px',
+                                                    color: '#c852e6'
+                                                }}>PLUS<div className="form-check form-check-inline">
+                                                    <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" style={{
+                                                        marginLeft: '-5px',
+                                                        marginTop: '10px'
+                                                    }} />
+                                                </div></h6></Col>
+                                            </Row>
+                                        </Col>
+                                    </Row>               
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col className="mb-4 col-lg-11 col-md-11 col-sm-12 col-xs-12">
+                                    <Row>
+                                        <Col className="box box m-2 p-3">
+                                            <Row>
+                                                <Col lg={12} md={12} sm={12} xs={12} className="value-form"><h6 style={{
+                                                    textAlign: 'left',
+                                                }}>
+                                                    <label style={{
+                                                        paddingBottom: '10px'
+                                                    }}>Episode Description</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </h6></Col>
+                                            </Row>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col className="mb-4 col-lg-1 col-md-1 col-sm-12 col-xs-12">
+                                    <Row>
+                                        <Col className="mt-5 pt-4">
+                                        <i class="fa fa-minus-circle" aria-hidden="true" style=
+                                            {{
+                                                fontSize: '35px',
+                                                cursor: 'pointer',
+                                                color: '#ffffff',
+                                                opacity: '0.6',
+                                            }}></i>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                        </Col>
                       </Row>
-                      <Row>
-                          <Col className="mb-4 col-lg-11 col-md-11 col-sm-12 col-xs-12">
-                              <Row>
-                                  <Col className="box box m-2 p-3">
-                                      <Row>
-                                          <Col lg={12} md={12} sm={12} xs={12} className="value-form"><h6 style={{
-                                            textAlign: 'left',
-                                          }}>
-                                              <label style={{
-                                                paddingBottom: '10px'
-                                              }}>Episode Description</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                      </h6></Col>
-                                      </Row>
-                                  </Col>
-                              </Row>
-                          </Col>
-                          <Col className="mb-4 col-lg-1 col-md-1 col-sm-12 col-xs-12">
-                              <Row>
-                                  <Col className="mt-5 pt-4">
-                                  <i class="fa fa-minus-circle" aria-hidden="true" style=
-                                    {{
-                                        fontSize: '35px',
-                                        cursor: 'pointer',
-                                        color: '#ffffff',
-                                        opacity: '0.6',
-                                    }}></i>
-                                  </Col>
-                              </Row>
-                          </Col>
+
+                      <Row className="plus-form-sep">
+                          <Col>
+                            <Row>
+                                <Col className="mb-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <Row>
+                                        <Col className="box box m-2 p-3">
+                                            <Row>
+                                                <Col lg={4} md={4} sm={12} xs={12} className="value-form"><h6>Episode Name</h6></Col>
+                                                <Col lg={8} md={8} sm={12} xs={12} className="value-form"><h6 style={{
+                                                    textAlign: 'right'
+                                                }}>
+                                                    <input type="text" />
+                                            </h6></Col>
+                                            </Row>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col className="mb-4 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                    <Row>
+                                        <Col className="box box m-2 p-3">
+                                            <Row>
+                                                <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Episode Thumbnail</h6></Col>
+                                                
+                                                    <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6 style={{
+                                                            textAlign: 'right'
+                                                        }}>
+                                                            <input className="form-control" type="file" id="formFile" />
+                                                    </h6></Col>
+                                            </Row>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col className="mb-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <Row>
+                                        <Col className="box box m-2 p-3">
+                                            <Row>
+                                                <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6>Episode Vimeo Link </h6></Col>
+                                                <Col lg={6} md={6} sm={12} xs={12} className="value-form"><h6><input type="text" /></h6></Col>
+                                            </Row>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col className="mb-4 col-lg-1 col-md-1 col-sm-12 col-xs-12">
+                                    <Row>
+                                        <Col className="box box m-2 p-2">
+                                            <Row>
+                                                <Col lg={12} md={12} sm={12} xs={12} className="value-form"><h6 style={{
+                                                    textAlign: 'center',
+                                                    fontSize: '12px',
+                                                    color: '#c852e6'
+                                                }}>PLUS<div className="form-check form-check-inline">
+                                                    <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" style={{
+                                                        marginLeft: '-5px',
+                                                        marginTop: '10px'
+                                                    }} />
+                                                </div></h6></Col>
+                                            </Row>
+                                        </Col>
+                                    </Row>               
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col className="mb-4 col-lg-11 col-md-11 col-sm-12 col-xs-12">
+                                    <Row>
+                                        <Col className="box box m-2 p-3">
+                                            <Row>
+                                                <Col lg={12} md={12} sm={12} xs={12} className="value-form"><h6 style={{
+                                                    textAlign: 'left',
+                                                }}>
+                                                    <label style={{
+                                                        paddingBottom: '10px'
+                                                    }}>Episode Description</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </h6></Col>
+                                            </Row>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col className="mb-4 col-lg-1 col-md-1 col-sm-12 col-xs-12">
+                                    <Row>
+                                        <Col className="mt-5 pt-4">
+                                        <i class="fa fa-minus-circle" aria-hidden="true" style=
+                                            {{
+                                                fontSize: '35px',
+                                                cursor: 'pointer',
+                                                color: '#ffffff',
+                                                opacity: '0.6',
+                                            }}></i>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                        </Col>
                       </Row>
+                      
                       <Row>
                           <Col className="value-form mt-4 mb-3" style={{
                               textAlign: 'center'
