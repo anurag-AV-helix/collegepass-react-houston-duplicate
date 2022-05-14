@@ -59,6 +59,10 @@ const Sidebar = ({ expanded }) => {
           <i className="bi bi-app-indicator icon"></i>
           <span className="sidebar-text">Notifications</span>
         </Link>
+        <Link to="/daily-byte" className="sidebar-link">
+          <i className="bi bi-vector-pen icon"></i>
+          <span className="sidebar-text">Daily Byte</span>
+        </Link>
         <Link to="/series" className="sidebar-link">
           <i className="bi bi-collection-play icon"></i>
           <span className="sidebar-text">Series</span>

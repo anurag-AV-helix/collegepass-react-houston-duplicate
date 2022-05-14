@@ -15,6 +15,8 @@ import Dashboard from './pages/Pages/Dashboard'
 import Series from './pages/Pages/Series'
 import SeriesList from './pages/Pages/SeriesList'
 import IndividualStats from './pages/Pages/IndividualStats'
+import DailyByte from './pages/Pages/DailyByte'
+import ScheduleDailyByte from './pages/Pages/ScheduleDailyByte'
 
 
 const RoutesList = [
@@ -108,6 +110,18 @@ const RoutesList = [
     title: 'IndividualStats',
     path: '/individual-stats/',
     component: <IndividualStats />,
+    isPrivate: false,
+   },
+   {
+    title: 'DailyByte',
+    path: '/daily-byte/',
+    component: <DailyByte />,
+    isPrivate: false,
+   },
+   {
+    title: 'ScheduleDailyByte',
+    path: '/schedule-daily-byte/',
+    component: <ScheduleDailyByte />,
     isPrivate: false,
    },
 ]
