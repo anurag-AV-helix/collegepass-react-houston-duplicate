@@ -64,6 +64,7 @@ button.btn.dropdown-toggle.btn-light {
     font-size: 16px;
     text-align: left;
     margin-bottom: 0;
+    letter-spacing: 0.03rem;
 }
 .value-form h6 i {
     color: #008000;
@@ -117,4 +118,7 @@ i.fa.fa-minus-circle {
     padding: 20px 10px 0px 10px;
     margin: 5px 0px 45px 0px;
     border: 0.5px solid #e6a851;
+}
+select#inputGroupSelect01 {
+    padding: 5px 15px;
 }
